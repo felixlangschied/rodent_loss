@@ -1,19 +1,8 @@
 from pathlib import Path
 import pandas as pd
 from statsmodels.stats.multitest import multipletests
-
-def load_pathdict(rnaseqdir):
-    pathdict = {
-        'human': {
-            'Mir-197-3p': f'{rnaseqdir}/human_results_Neg_vs_mir197.tsv', 
-            'Mir-769-5p': f'{rnaseqdir}/human_results_Neg_vs_mir769.tsv'
-            },
-        'mouse': {
-            'Mir-197-3p': f'{rnaseqdir}/mouse_results_Neg_vs_mir197.tsv',
-            'Mir-769-5p': f'{rnaseqdir}/RNAseq/mouse_results_Neg_vs_mir769.tsv'
-            }
-        }
-    return pathdict
+import argparse
+import numpy as np
 
 
 def parse_rnaseq(path, orthos, organism, mirna):
@@ -51,16 +40,13 @@ def calc_FDR(pvals):
     return padj
 
 
-def find_significant(df, minT=100, pT=0.05, fT=0.5):
+def find_significant(df, minT, pT, fT):
     df = df[df['bMctrl'] >= minT]
     df = df[(df['log2FoldChange'] > fT) | (df['log2FoldChange'] < -fT)]
     df['padj'] = calc_FDR(df['pvalue'].values)
     df = df[df['padj'] <= float(pT)]
-    # split conditions
-    down = df[df['log2FoldChange'] <= -fT].reset_index(drop=True)
-    up = df[df['log2FoldChange'] >= fT].reset_index(drop=True)
-    both = df[(df['log2FoldChange'] <= -fT) | (df['log2FoldChange'] >= fT)]
-    return down, up, both
+
+    return df
 
 
 def find_orthostring(ensidseries, orthodict):
@@ -96,23 +82,29 @@ def read_oma(path):
     return omap
 
 
-def parse_rnaseq(minT=100, fT=0.5, pT=0.05):
-    """
-    minT = Minimum number of reads in the negative control
-    fT = Minimum log2fold-change (both negative and positive)
-    pT = adjusted p-value threshold (after filtering for minT and fT)
-    """
-    datadir = 
-    pairwise = read_oma(omapath)
-    pdcollect = []
-    for organism in pathdict:
-        taxid = namemap[organism]
+def main(args):
+    # load OMA pairwise orthologs
+    pairwise = read_oma(args.oma_path)
+    assert len(pairwise) > 0
 
-        for mirna in pathdict[organism]:
-            printmd(f'### {organism} - {mirna}')
+    # load RNAseq data
+    rnadf = parse_rnaseq(args.in_path, pairwise, args.organism, args.mirna)
+    differential = find_significant(rnadf, args.min_reads, args.min_adj_p, args.min_logfoldchange)
 
-            # load RNAseq data
-            path = pathdict[organism][mirna]
-            rnadf = parse_rnaseq(path, pairwise, organism, mirna)
-            rnadf['gene'] = rnadf['gene'].str.upper()
-            down, up, both = find_significant(rnadf, minT, pT, fT)
+    # save
+    differential.to_csv(args.out_path, sep='\t', index=False)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Find differentially expressed genes from RNAseq data.")
+    parser.add_argument("-in_path", help="the input file")
+    parser.add_argument("-out_path", help="the output file")
+    parser.add_argument("-oma_path", help="Path to the pairwise ortholog assignments of human and murine genes by OMA")
+    parser.add_argument("-organism", help="Organism in whose iPSCs the experiment was performed")
+    parser.add_argument("-mirna", help="miRNA that was overexpressed")
+    parser.add_argument("-min_reads", required=False, default=100, help="Minimum number of reads in the negative control for a gene to be considered.")
+    parser.add_argument("-min_logfoldchange", required=False, default=0.5, help="Minimum log2fold-change (both negative and positive).")
+    parser.add_argument("-min_adj_p", required=False, default=0.05, help="adjusted p-value threshold (after filtering for minT and fT).")
+    args = parser.parse_args()
+
+    main(args)
