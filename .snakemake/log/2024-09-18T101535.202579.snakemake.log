@@ -1,0 +1,80 @@
+host: wks16
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+find_differential_genes        4
+total                          5
+
+Select jobs to execute...
+Execute 4 jobs...
+
+[Wed Sep 18 10:15:35 2024]
+localrule find_differential_genes:
+    input: analyses/rnaseq/data/mouse_results_Neg_vs_mir197.tsv
+    output: milestones/data/rnaseq/mouse_mir197_differential_genes.tsv
+    jobid: 3
+    reason: Missing output files: milestones/data/rnaseq/mouse_mir197_differential_genes.tsv
+    wildcards: organism=mouse, mirna=mir197
+    resources: tmpdir=/tmp
+
+
+[Wed Sep 18 10:15:35 2024]
+localrule find_differential_genes:
+    input: analyses/rnaseq/data/human_results_Neg_vs_mir769.tsv
+    output: milestones/data/rnaseq/human_mir769_differential_genes.tsv
+    jobid: 2
+    reason: Missing output files: milestones/data/rnaseq/human_mir769_differential_genes.tsv
+    wildcards: organism=human, mirna=mir769
+    resources: tmpdir=/tmp
+
+
+[Wed Sep 18 10:15:35 2024]
+localrule find_differential_genes:
+    input: analyses/rnaseq/data/human_results_Neg_vs_mir197.tsv
+    output: milestones/data/rnaseq/human_mir197_differential_genes.tsv
+    jobid: 1
+    reason: Missing output files: milestones/data/rnaseq/human_mir197_differential_genes.tsv
+    wildcards: organism=human, mirna=mir197
+    resources: tmpdir=/tmp
+
+
+[Wed Sep 18 10:15:35 2024]
+localrule find_differential_genes:
+    input: analyses/rnaseq/data/mouse_results_Neg_vs_mir769.tsv
+    output: milestones/data/rnaseq/mouse_mir769_differential_genes.tsv
+    jobid: 4
+    reason: Missing output files: milestones/data/rnaseq/mouse_mir769_differential_genes.tsv
+    wildcards: organism=mouse, mirna=mir769
+    resources: tmpdir=/tmp
+
+[Wed Sep 18 10:15:47 2024]
+Finished job 4.
+1 of 5 steps (20%) done
+[Wed Sep 18 10:15:47 2024]
+Finished job 2.
+2 of 5 steps (40%) done
+[Wed Sep 18 10:15:48 2024]
+Finished job 3.
+3 of 5 steps (60%) done
+[Wed Sep 18 10:15:48 2024]
+Finished job 1.
+4 of 5 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 18 10:15:48 2024]
+localrule all:
+    input: milestones/data/rnaseq/human_mir197_differential_genes.tsv, milestones/data/rnaseq/human_mir769_differential_genes.tsv, milestones/data/rnaseq/mouse_mir197_differential_genes.tsv, milestones/data/rnaseq/mouse_mir769_differential_genes.tsv
+    jobid: 0
+    reason: Input files updated by another job: milestones/data/rnaseq/mouse_mir197_differential_genes.tsv, milestones/data/rnaseq/human_mir197_differential_genes.tsv, milestones/data/rnaseq/mouse_mir769_differential_genes.tsv, milestones/data/rnaseq/human_mir769_differential_genes.tsv
+    resources: tmpdir=/tmp
+
+[Wed Sep 18 10:15:48 2024]
+Finished job 0.
+5 of 5 steps (100%) done
+Complete log: .snakemake/log/2024-09-18T101535.202579.snakemake.log
