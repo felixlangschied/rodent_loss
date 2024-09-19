@@ -2,6 +2,30 @@ ORGANISMS = ["human", "mouse"]
 MIRNAS = ["mir197", "mir769"]
 
 
+rule pca_figure:
+    input:
+        expand(
+            "analyses/rnaseq/results/{organism}_reads_pca.png",
+            organism=ORGANISMS,
+            mirna=MIRNAS,
+        ),
+
+
+rule reads_pca:
+    input:
+        expand(
+            "analyses/rnaseq/data/{organism}_results_Neg_vs_{mirna}.tsv",
+            organism=lambda wildcards: wildcards.organism,
+            mirna=MIRNAS,
+        ),
+    output:
+        "analyses/rnaseq/results/{organism}_reads_pca.png",
+    conda:
+        "environment.yml"
+    shell:
+        "python analyses/rnaseq/scripts/reads_pca.py {input} {wildcards.organism} {output}"
+
+
 rule all:
     input:
         expand(
