@@ -2,8 +2,13 @@ ORGANISMS = ["human", "mouse"]
 MIRNAS = ["mir197", "mir769"]
 
 
-rule pca_figure:
+rule all:
     input:
+        expand(
+            "milestones/data/rnaseq/{organism}_{mirna}_differential_genes.tsv",
+            organism=ORGANISMS,
+            mirna=MIRNAS,
+        ),
         expand(
             "analyses/rnaseq/results/{organism}_reads_pca.png",
             organism=ORGANISMS,
@@ -13,26 +18,14 @@ rule pca_figure:
 
 rule reads_pca:
     input:
-        expand(
-            "analyses/rnaseq/data/{organism}_results_Neg_vs_{mirna}.tsv",
-            organism=lambda wildcards: wildcards.organism,
-            mirna=MIRNAS,
-        ),
+        '/home/felixl/PycharmProjects/rodent_loss/analyses/rnaseq/data/counts_matrix/{organism}_counts.matrix',
     output:
         "analyses/rnaseq/results/{organism}_reads_pca.png",
-    conda:
-        "environment.yml"
     shell:
-        "python analyses/rnaseq/scripts/reads_pca.py {input} {wildcards.organism} {output}"
-
-
-rule all:
-    input:
-        expand(
-            "milestones/data/rnaseq/{organism}_{mirna}_differential_genes.tsv",
-            organism=ORGANISMS,
-            mirna=MIRNAS,
-        ),
+        "python analyses/rnaseq/scripts/reads_pca.py "
+        "-in_path {input} "
+        "-out_path {output} "
+        "-organism {wildcards.organism} "
 
 
 rule find_differential_genes:
