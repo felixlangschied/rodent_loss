@@ -1,4 +1,6 @@
 import pandas as pd
+from statsmodels.stats.multitest import multipletests
+import numpy as np
 
 
 def reads_per_gene_in_condition(path, index_key='name'):

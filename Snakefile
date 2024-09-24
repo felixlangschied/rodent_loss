@@ -2,41 +2,21 @@ ORGANISMS = ["human", "mouse"]
 MIRNAS = ["mir197", "mir769"]
 
 
+module rnaseq:
+    snakefile:
+        "analyses/rnaseq/rnaseq.smk"
+use rule * from rnaseq as rnaseq_*
+
+module doapr:
+    snakefile:
+        "analyses/down_and_predicted/doapr.smk"
+use rule * from doapr as doapr_*
+
 rule all:
     input:
-        expand(
-            "milestones/data/rnaseq/{organism}_{mirna}_differential_genes.tsv",
-            organism=ORGANISMS,
-            mirna=MIRNAS,
-        ),
-        expand(
-            "analyses/rnaseq/results/{organism}_reads_pca.png",
-            organism=ORGANISMS,
-            mirna=MIRNAS,
-        ),
-
-
-rule reads_pca:
-    input:
-        'external_data/counts_matrix/counts_matrix/{organism}_counts.matrix',
-    output:
-        "analyses/rnaseq/results/{organism}_reads_pca.png",
-    shell:
-        "python analyses/rnaseq/scripts/reads_pca.py "
-        "-in_path {input} "
-        "-out_path {output} "
-        "-organism {wildcards.organism} "
-
-
-rule find_differential_genes:
-    input:
-        "analyses/rnaseq/data/{organism}_results_Neg_vs_{mirna}.tsv",
-    output:
-        "milestones/data/rnaseq/{organism}_{mirna}_differential_genes.tsv",
-    shell:
-        "python analyses/rnaseq/scripts/differential_expressed_genes.py "
-        "-in_path {input} "
-        "-out_path {output} "
-        "-oma_path external_data/human_mouse_omapairwise.txt "
-        "-organism {wildcards.organism} "
-        "-mirna {wildcards.mirna}"
+        # identify differentiall expressed genes from DESEQ2 results,
+        # generate PCA plots of reads (each condition clusters in plot)
+        rules.rnaseq_all.input,
+        # find genes that are down-regulated and predicted as targets
+        rules.doapr_all.input,
+    default_target: True

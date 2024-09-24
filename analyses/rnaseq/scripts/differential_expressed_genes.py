@@ -1,8 +1,4 @@
-from pathlib import Path
-import pandas as pd
-from statsmodels.stats.multitest import multipletests
 import argparse
-import numpy as np
 from rodent_loss_src.rnaseq import read_oma, parse_rnaseq, find_significant
 
 

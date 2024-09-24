@@ -3,6 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import zscore
 from rodent_loss_src.rnaseq import reads_per_gene_in_condition
+import argparse
 
 
 def read_and_filter_predicted_targets(path, organism, mirna, targetscan_cutoff=-0.2):
@@ -49,17 +50,18 @@ def filter_readsdf_mirna(df, mirna):
 
 
 def main(args):
-    reads_df = reads_per_gene_in_condition(args.in_path)
+    reads_df = reads_per_gene_in_condition(args.deseq_path)
     mir_reads_df = filter_readsdf_mirna(reads_df, args.mirna)
-    targetdf = read_and_filter_predicted_targets(tarpath, args.organism, args.mirna)
+    targetdf = read_and_filter_predicted_targets(args.targets_path, args.organism, args.mirna)
     heat_df = mir_reads_df.join(targetdf, how='inner')
     fig = zscore_targetscan_heatmap(heat_df)
-    plt.savefig(args.out_path})
+    plt.savefig(args.out_path)
 
 
 if __name__ == "__main__":    
     parser = argparse.ArgumentParser(description="Find differentially expressed genes from RNAseq data.")
-    parser.add_argument("-in_path", help="the input file")
+    parser.add_argument("-deseq_path", help="the input file with the differential gene expression analysis results from DESEQ2")
+    parser.add_argument("-targets_path", help="the input file with the predicted targets from TargetScan")
     parser.add_argument("-out_path", help="the output file")
     parser.add_argument("-organism", help="Organism in whose iPSCs the experiment was performed")
     parser.add_argument("-mirna", help="miRNA that was overexpressed")
