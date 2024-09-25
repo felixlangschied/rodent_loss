@@ -30,7 +30,7 @@ def reads_per_gene_in_condition(path, index_key='name'):
     # filter
     conditions = [name for name in df.columns if '_' in name]  # negative control + mir197 + mir769
     relevant_columns = conditions + [index_key]
-    
+
     return df.filter(relevant_columns).set_index(index_key).astype(int)
 
 

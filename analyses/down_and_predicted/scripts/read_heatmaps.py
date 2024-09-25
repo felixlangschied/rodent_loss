@@ -23,6 +23,9 @@ def read_and_filter_predicted_targets(path, organism, mirna, targetscan_cutoff=-
     # modify index
     df = df.set_index('gene')
 
+    # sort rows
+    df = df.sort_values(['TShuman_tc++s'])
+
     return df
 
 def zscore_targetscan_heatmap(df, cmap='viridis'):
