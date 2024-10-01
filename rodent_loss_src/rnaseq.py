@@ -3,6 +3,29 @@ from statsmodels.stats.multitest import multipletests
 import numpy as np
 
 
+def split_up_down_regulated(path):
+    """
+    Path typicall: '{PROJECTDIR}/milestones/data/rnaseq/{organism}_{mirna}_differential_genes.tsv'
+    """
+    df = pd.read_csv(path, sep='\t')
+    df['gene'] = df['gene'].str.upper()
+    up = df[df['log2FoldChange'] >= 0].reset_index(drop=True)
+    down = df[df['log2FoldChange'] <= -0].reset_index(drop=True)
+    return list(up.gene.values), list(down.gene.values)
+
+
+def filter_readsdf_mirna(df, mirna):
+    """
+    Adjust naming scheme of negative control of the dataframe outputted by 'reads_per_gene_in_condition'
+    """
+    df = df.rename(columns=lambda col: col.replace('Neg-Ctl', 'CTRL'))
+    if mirna == 'mir197':
+        columns = [col for col in df.columns if not '-769_' in col]
+    else:
+        columns = [col for col in df.columns if not '-197_' in col]
+    return df.filter(columns)
+
+
 def reads_per_gene_in_condition(path, index_key='name'):
     """
     Parses normalized count.matrix files and returns Pandas dataframe.
