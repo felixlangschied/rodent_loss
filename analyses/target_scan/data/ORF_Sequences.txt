@@ -1,0 +1,1 @@
+/share/project/felixl/targetscan/ORF_Sequences.txt
