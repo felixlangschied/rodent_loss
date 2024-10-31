@@ -1,0 +1,88 @@
+miRTarBase ID	miRNA	Species (miRNA)	Target Gene	Target Gene (Entrez ID)	Species (Target Gene)	Experiments	Support Type	References (PMID)	mirbase_fam
+MIRT000473	hsa-miR-1296-5p	Homo sapiens	MCM2	4171	Homo sapiens	qRT-PCR//Western blot	Functional MTI	20332239	mir-1296
+MIRT001979	hsa-miR-510-5p	Homo sapiens	HTR3E	285242	Homo sapiens	Luciferase reporter assay	Functional MTI	18614545	mir-510
+MIRT003549	hsa-miR-489-3p	Homo sapiens	PTPN11	5781	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	20700123	mir-489
+MIRT003549	hsa-miR-489-3p	Homo sapiens	PTPN11	5781	Homo sapiens	Luciferase reporter assay	Functional MTI	26918448	mir-489
+MIRT004198	hsa-miR-197-3p	Homo sapiens	FOXO3	2309	Homo sapiens	Microarray//qRT-PCR//Western blot	Functional MTI	26540468	mir-197
+MIRT004412	hsa-miR-197-3p	Homo sapiens	TUSC2	11334	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	19671678	mir-197
+MIRT004745	hsa-miR-892b	Homo sapiens	MCL1	4170	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	20829195	mir-892b
+MIRT005338	hsa-miR-510-5p	Homo sapiens	SPDEF	25803	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	18922924	mir-510
+MIRT005461	hsa-miR-885-5p	Homo sapiens	CDK2	1017	Homo sapiens	Luciferase reporter assay//Northern blot//qRT-PCR//Western blot	Functional MTI	21233845	mir-885
+MIRT005462	hsa-miR-885-5p	Homo sapiens	MCM5	4174	Homo sapiens	Luciferase reporter assay//Northern blot//qRT-PCR//Western blot	Functional MTI	21233845	mir-885
+MIRT007211	hsa-miR-197-3p	Homo sapiens	NSUN5	55695	Homo sapiens	Immunohistochemistry//In situ hybridization//Luciferase reporter assay//Western blot	Functional MTI	23139153	mir-197
+MIRT007234	hsa-miR-506-3p	Homo sapiens	FXN	2395	Homo sapiens	Luciferase reporter assay	Functional MTI	23382970	mir-506
+MIRT053554	hsa-miR-1908-5p	Homo sapiens	APOE	348	Homo sapiens	ELISA//Luciferase reporter assay//Microarray	Functional MTI	23142051	mir-1908
+MIRT053555	hsa-miR-1908-5p	Homo sapiens	DNAJA4	55466	Homo sapiens	ELISA//Luciferase reporter assay//Microarray	Functional MTI	23142051	mir-1908
+MIRT054134	hsa-miR-513b-5p	Homo sapiens	HMGB3	3149	Homo sapiens	Flow//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	25095979	mir-513b
+MIRT054158	hsa-miR-508-5p	Homo sapiens	ABCB1	5243	Homo sapiens	Immunohistochemistry//In situ hybridization//Luciferase reporter assay//Microarray//qRT-PCR//Western blot	Functional MTI	23893241	mir-508
+MIRT054159	hsa-miR-508-5p	Homo sapiens	ZNRD1	30834	Homo sapiens	Immunohistochemistry//In situ hybridization//Luciferase reporter assay//Microarray//qRT-PCR//Western blot	Functional MTI	23893241	mir-508
+MIRT054282	hsa-miR-506-3p	Homo sapiens	SNAI2	6591	Homo sapiens	Immunohistochemistry//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	25707493	mir-506
+MIRT054282	hsa-miR-506-3p	Homo sapiens	SNAI2	6591	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	23717581	mir-506
+MIRT054516	hsa-miR-513b-5p	Homo sapiens	GNG13	51764	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24252134	mir-513b
+MIRT054517	hsa-miR-513c-5p	Homo sapiens	GNG13	51764	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24252134	mir-513c
+MIRT054519	hsa-miR-513b-5p	Homo sapiens	DR1	1810	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24252134	mir-513b
+MIRT054520	hsa-miR-513c-5p	Homo sapiens	DR1	1810	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24252134	mir-513c
+MIRT054522	hsa-miR-513b-5p	Homo sapiens	BTG3	10950	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24252134	mir-513b
+MIRT054523	hsa-miR-513c-5p	Homo sapiens	BTG3	10950	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24252134	mir-513c
+MIRT054566	hsa-miR-506-3p	Homo sapiens	CD151	977	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	23717581	mir-506
+MIRT054567	hsa-miR-506-3p	Homo sapiens	VIM	7431	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	23717581	mir-506
+MIRT054567	hsa-miR-506-3p	Homo sapiens	VIM	7431	Homo sapiens	Luciferase reporter assay	Functional MTI	25230372	mir-506
+MIRT054620	hsa-miR-506-3p	Homo sapiens	CDK4	1019	Homo sapiens	Immunohistochemistry//Luciferase reporter assay//Microarray//qRT-PCR//Western blot	Functional MTI	24604117	mir-506
+MIRT054621	hsa-miR-506-3p	Homo sapiens	CDK6	1021	Homo sapiens	Immunohistochemistry//Luciferase reporter assay//Microarray//qRT-PCR//Western blot	Functional MTI	24604117	mir-506
+MIRT054634	hsa-miR-197-3p	Homo sapiens	CD82	3732	Homo sapiens	Immunohistochemistry//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24613834	mir-197
+MIRT054634	hsa-miR-197-3p	Homo sapiens	CD82	3732	Homo sapiens	Immunofluorescence//Immunohistochemistry//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	28252644	mir-197
+MIRT073660	hsa-miR-885-5p	Homo sapiens	IGF1R	3480	Homo sapiens	Luciferase reporter assay//Western blot//qRT-PCR	Functional MTI	26554827	mir-885
+MIRT210911	hsa-miR-508-3p	Homo sapiens	NFKB1	4790	Homo sapiens	Luciferase reporter assay//Western blot//ChIP-seq//Immunohistochemistry//qRT-PCR	Functional MTI	26801246	mir-508
+MIRT408575	hsa-miR-506-3p	Homo sapiens	FOXQ1	94234	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26935526	mir-506
+MIRT408575	hsa-miR-506-3p	Homo sapiens	FOXQ1	94234	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	25856555	mir-506
+MIRT437836	hsa-miR-506-3p	Homo sapiens	SNAI1	6615	Homo sapiens	Immunofluorescence//Immunohistochemistry//In situ hybridization//Luciferase reporter assay//Microarray//qRT-PCR//Western blot	Functional MTI	23410973	mir-506
+MIRT438052	hsa-miR-510-5p	Homo sapiens	PRDX1	5052	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	23971998	mir-510
+MIRT438137	hsa-miR-766-3p	Homo sapiens	BAX	581	Homo sapiens	Flow//Luciferase reporter assay//Microarray//qRT-PCR//Western blot	Functional MTI	24356076	mir-766
+MIRT438185	hsa-miR-888-5p	Homo sapiens	CDH1	999	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24480745	mir-888
+MIRT438349	hsa-miR-506-3p	Homo sapiens	YAP1	10413	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	25846731	mir-506
+MIRT438349	hsa-miR-506-3p	Homo sapiens	YAP1	10413	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	26550114	mir-506
+MIRT438396	hsa-miR-885-3p	Homo sapiens	CD274	29126	Homo sapiens	Luciferase reporter assay//qRT-PCR	Functional MTI	24577056	mir-885
+MIRT438409	hsa-miR-197-3p	Homo sapiens	BMF	90427	Homo sapiens	Flow//Luciferase reporter assay//qRT-PCR	Functional MTI	24488097	mir-197
+MIRT438410	hsa-miR-197-3p	Homo sapiens	PMAIP1	5366	Homo sapiens	Flow//Luciferase reporter assay//qRT-PCR	Functional MTI	24488097	mir-197
+MIRT438502	hsa-miR-541-3p	Homo sapiens	ERBB2	2064	Homo sapiens	Luciferase reporter assay	Functional MTI	24148764	mir-541
+MIRT438747	hsa-miR-197-3p	Homo sapiens	MTHFD1	4522	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24123340	mir-197
+MIRT438878	hsa-miR-885-5p	Homo sapiens	CASP3	836	Homo sapiens	Luciferase reporter assay	Functional MTI	23271051	mir-885
+MIRT731123	hsa-miR-197-3p	Homo sapiens	FOXJ2	55810	Homo sapiens	Luciferase reporter assay//qRT-PCR//Microarray//Western blot	Functional MTI	25451482	mir-197
+MIRT731241	hsa-miR-506-3p	Homo sapiens	ETS1	2113	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot//Immunohistochemistry	Functional MTI	26362716	mir-506
+MIRT731258	hsa-miR-506-3p	Homo sapiens	SPHK1	8877	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot//Luciferase reporter assay and western blot	Functional MTI	27065335	mir-506
+MIRT731258	hsa-miR-506-3p	Homo sapiens	SPHK1	8877	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26549227	mir-506
+MIRT731266	hsa-miR-489-3p	Homo sapiens	GSE1	23199	Homo sapiens	Luciferase reporter assay	Functional MTI	26828271	mir-489
+MIRT731326	hsa-miR-508-5p	Homo sapiens	GPNMB	10457	Homo sapiens	Luciferase reporter assay	Functional MTI	27003587	mir-508
+MIRT731608	hsa-miR-489-3p	Homo sapiens	SNAI2	6591	Homo sapiens	Luciferase reporter assay	Functional MTI	26918943	mir-489
+MIRT731717	hsa-miR-506-3p	Homo sapiens	ROCK1	6093	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26474697	mir-506
+MIRT731741	hsa-miR-197-3p	Homo sapiens	MAPK1	5594	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26151540	mir-197
+MIRT731812	hsa-miR-769-5p	Homo sapiens	GSK3B	2932	Homo sapiens	Immunofluorescence//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27470346	mir-769
+MIRT731950	hsa-miR-1908-5p	Homo sapiens	NKIRAS2	28511	Homo sapiens	Immunoprecipitaion//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	28039456	mir-1908
+MIRT732252	hsa-miR-506-3p	Homo sapiens	TCF3	6929	Homo sapiens	Luciferase reporter assay//qRT-PCR	Functional MTI	27538704	mir-506
+MIRT732331	hsa-miR-506-5p	Homo sapiens	MTDH	92140	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	27602115	mir-506
+MIRT732391	hsa-miR-489-3p	Homo sapiens	PAX3	5077	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	27859625	mir-489
+MIRT732433	hsa-miR-506-3p	Homo sapiens	GLI3	2737	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	24608427	mir-506
+MIRT732590	hsa-miR-489-3p	Homo sapiens	SPIN1	10927	Homo sapiens	Immunohistochemistry//Luciferase reporter assay//Western blot	Functional MTI	27171498	mir-489
+MIRT732936	hsa-miR-506-3p	Homo sapiens	DNMT3B	1789	Homo sapiens	Mass spectrometry//Western blot	Functional MTI	26497367	mir-506
+MIRT733334	hsa-miR-508-3p	Homo sapiens	PIKFYVE	200576	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26302821	mir-508
+MIRT733414	hsa-miR-885-3p	Homo sapiens	BMPR1A	657	Homo sapiens	Luciferase reporter assay//Western blot	Functional MTI	24882581	mir-885
+MIRT733449	hsa-miR-892b	Homo sapiens	TRAF2	7186	Homo sapiens	Immunoprecipitaion//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26747895	mir-892b
+MIRT733451	hsa-miR-892b	Homo sapiens	TAB3	257397	Homo sapiens	Immunoprecipitaion//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26747895	mir-892b
+MIRT733454	hsa-miR-892b	Homo sapiens	MAP3K7	6885	Homo sapiens	Immunoprecipitaion//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26747895	mir-892b
+MIRT733547	hsa-miR-489-3p	Homo sapiens	PROX1	5629	Homo sapiens	Immunohistochemistry//In situ hybridization//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27725907	mir-489
+MIRT733636	hsa-miR-506-3p	Homo sapiens	WNK1	65125	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	24469051	mir-506
+MIRT733746	hsa-miR-1296-5p	Homo sapiens	ERBB2	2064	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	28099468	mir-1296
+MIRT733787	hsa-miR-506-3p	Homo sapiens	IQGAP1	8826	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26398880	mir-506
+MIRT734316	hsa-miR-506-5p	Homo sapiens	CTNNB1	1499	Homo sapiens	Western blot	Functional MTI	28217977	mir-506
+MIRT734339	hsa-miR-506-5p	Homo sapiens	IQGAP1	8826	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26398880	mir-506
+MIRT734353	hsa-miR-1908-5p	Homo sapiens	SKI	6497	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27256397	mir-1908
+MIRT734364	hsa-miR-506-3p	Homo sapiens	COTL1	23406	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27893417	mir-506
+MIRT734431	hsa-miR-197-5p	Homo sapiens	IGFBP5	3488	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	25990270	mir-197
+MIRT734513	hsa-miR-197-3p	Homo sapiens	RAN	5901	Homo sapiens	Immunofluorescence//Luciferase reporter assay//Microarray	Functional MTI	26581983	mir-197
+MIRT734514	hsa-miR-506-3p	Homo sapiens	CDH2	1000	Homo sapiens	Luciferase reporter assay	Functional MTI	25230372	mir-506
+MIRT734670	hsa-miR-885-5p	Homo sapiens	CTNNB1	1499	Homo sapiens	Immunohistochemistry//In situ hybridization//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27738331	mir-885
+MIRT734716	hsa-miR-892a	Homo sapiens	CD226	10666	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27883251	mir-892a
+MIRT734725	hsa-miR-506-3p	Homo sapiens	PIM3	415116	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	26238203	mir-506
+MIRT734874	hsa-miR-506-3p	Homo sapiens	FLOT1	10211	Homo sapiens	Luciferase reporter assay//qRT-PCR	Functional MTI	25793370	mir-506
+MIRT735077	hsa-miR-489-3p	Homo sapiens	MMP7	4316	Homo sapiens	Immunohistochemistry//Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	28189067	mir-489
+MIRT735457	hsa-miR-541-3p	Homo sapiens	TGIF2	60436	Homo sapiens	Luciferase reporter assay//qRT-PCR//Western blot	Functional MTI	27448300	mir-541
