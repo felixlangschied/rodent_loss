@@ -11,6 +11,8 @@ rule targetscan:
         utr="data/UTR_sequences_all.txt",  # download UTR sequences from https://www.targetscan.org/cgi-bin/targetscan/data_download.vert72.cgi
     output:
         "results/predicted_targets.txt",
+    conda:
+        'targetscan_env.yml'
     shell:
         "perl scripts/targetscan7/targetscan_70.pl "
         "{input.mirna} "
@@ -23,6 +25,8 @@ rule binning:
         utr="data/UTR_sequences_all.txt",  # download UTR sequences from https://www.targetscan.org/cgi-bin/targetscan/data_download.vert72.cgi
     output:
         "results/UTRs_median_BLs_bins.txt",
+    conda:
+        'targetscan_env.yml'
     shell:
         "perl scripts/targetscan7/TargetScan7_BL_PCT/targetscan_70_BL_bins.pl "
         "{input.utr} "
@@ -36,6 +40,8 @@ rule pct:
         bins="results/UTRs_median_BLs_bins.txt",
     output:
         "results/UTRs_BL_PCT.txt",
+    conda:
+        'targetscan_env.yml'
     shell:
         "perl scripts/targetscan7/TargetScan7_BL_PCT/targetscan_70_BL_PCT.pl "
         "{input.mirna} "
@@ -51,6 +57,8 @@ rule orf:
     output:
         counts="results/ORF_8mer_counts.txt",
         lengths="data/ORF_Sequences.lengths.txt",
+    conda:
+        'targetscan_env.yml'
     shell:
         "perl scripts/targetscan7/TargetScan7_context_scores/targetscan_count_8mers.pl "
         "{input.mirna} "
@@ -68,6 +76,8 @@ rule contextscore:
         counts="results/ORF_8mer_counts.txt",
     output:
         "results/context_scores_output.txt",
+    conda:
+        'targetscan_env.yml'
     shell:
         "perl scripts/targetscan7/TargetScan7_context_scores/targetscan_70_context_scores.pl "
         "{input.matmirs} "
