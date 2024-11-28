@@ -1,0 +1,7 @@
+condition1	condition2	overlap	num_overlap	label
+human|mir197	human|mir769	{'HTR7'}	1	human|mir197 - human|mir769
+human|mir197	mouse|mir197	{'CCDC85C', 'ARMC1', 'RAB28', 'TNFRSF21', 'ATP6V1A', 'MPZL1', 'TRIT1', 'AMMECR1L', 'KPNA6', 'MAPK8', 'TTPAL'}	11	human|mir197 - mouse|mir197
+human|mir197	mouse|mir769	{'MBD1', 'ERLIN2'}	2	human|mir197 - mouse|mir769
+human|mir769	mouse|mir197	{'STK35', 'TFAM'}	2	human|mir769 - mouse|mir197
+human|mir769	mouse|mir769	{'WDR37', 'FAM117B', 'TFAM'}	3	human|mir769 - mouse|mir769
+mouse|mir197	mouse|mir769	{'SMYD5', 'SLX4IP', 'TFAM'}	3	mouse|mir197 - mouse|mir769
