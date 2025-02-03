@@ -76,8 +76,8 @@ def read_oma(path):
             
             hucount.add(human)
             mucount.add(mouse)
-    print(f'No. unique human orthologs: {len(hucount)}')
-    print(f'No. unique mouse orthologs: {len(mucount)}')
+    # print(f'No. unique human orthologs: {len(hucount)}')
+    # print(f'No. unique mouse orthologs: {len(mucount)}')
                                            
     return omap
 
