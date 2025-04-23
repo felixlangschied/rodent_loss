@@ -1,0 +1,2 @@
+python /home/felixl/mambaforge/envs/gofigure/bin/gofigure.py -i /home/felixl/project/rodent_loss/analyses/compensation_integration/data/go_enrichment/mirtarbase_targets_filtered.txt -o filtered_go_figure -g single -e 100
+python /home/felixl/mambaforge/envs/gofigure/bin/gofigure.py -i /home/felixl/project/rodent_loss/analyses/compensation_integration/data/go_enrichment/mirtarbase_targets_nothreshold.txt -o nofilter_go_figure -g single -e 100
