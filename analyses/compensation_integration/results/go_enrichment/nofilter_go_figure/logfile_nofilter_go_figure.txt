@@ -1,0 +1,27 @@
+GO-Figure! version: 1.0.1
+
+Date run: 2025-04-23
+
+Command line input: ['/home/felixl/mambaforge/envs/gofigure/bin/gofigure.py', '-i', '/home/felixl/project/rodent_loss/analyses/compensation_integration/data/go_enrichment/mirtarbase_targets_nothreshold.txt', '-o', 'nofilter_go_figure', '-g', 'single', '-e', '100']
+
+go.obo version used: releases/2023-04-01
+
+go.obo version used to create GO relations: releases/2023-04-01
+
+
+Calculating biological process
+
+The following GO terms are converted or deleted because either they are an alt_id and not a primary id in the go.obo, because they are obsolete in the go.obo, or because they can't be found in the go.obo: 
+
+Original GO	New GO(s)	Reason
+	GO:0141124	removed
+
+Calculating molecular function
+
+No GO terms for ontology found: molecular_function
+
+
+Calculating cellular component
+
+No GO terms for ontology found: cellular_component
+
