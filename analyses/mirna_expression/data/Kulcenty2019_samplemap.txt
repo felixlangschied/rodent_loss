@@ -1,0 +1,8 @@
+GSM3935825  ipsc1_1 undifferentiated GPCCi001-A cell line, biol. rep 1
+GSM3935826  ipsc2_1 undifferentiated ND41658*H cell line, biol. rep 1
+GSM3935827  ipsc1_2 undifferentiated GPCCi001-A cell line, biol. rep 2
+GSM3935828  ipsc2_2 undifferentiated ND41658*H cell line, biol. rep 2
+GSM3935829  nsc1_1  neuronal stem cells differentiated from GPCCi001-A cell line,biol. rep 1
+GSM3935830  nsc1_2  neuronal stem cells differentiated from GPCCi001-A cell line,biol. rep 2
+GSM3935831  nsc2_1  neuronal stem cells differentiated from ND41658*H cell line,biol. rep 1
+GSM3935832  nsc2_2  neuronal stem cells differentiated from ND41658*H cell line,biol. rep 2
