@@ -1,0 +1,14 @@
+Mir-197 miR-197
+Mir-489 miR-489, miR-489
+Mir-506 miR-506, miR-507, miR-508, miR-509-1, miR-509-2, miR-509-3, miR-510, miR-513a-1, miR-513a-2, miR-513b, miR-513c, miR-514a-1, miR-514a-2, miR-514a-3, miR-514b, miR-888, miR-890, miR-892a, miR-892b, miR-892c, None
+Mir-766 miR-766
+Mir-769 miR-769
+Mir-885 miR-885
+Mir-1277 miR-1277
+Mir-1296 miR-1296
+Mir-1307 miR-1307
+Mir-1908 miR-1908
+Mir-3200 miR-3200
+Mir-3613 miR-3613
+Mir-6529 None
+Mir-9851 miR-9851
